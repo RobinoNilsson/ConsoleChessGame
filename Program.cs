@@ -27,9 +27,12 @@ namespace ConsoleChessGame
 
         private static string GameRoundBothTeamsMoveAndPrintsToBoard(Game game, string message)
         {
+            Console.WriteLine("PRESS TO START");
+            Console.ReadKey();
 
             while (game.whitePlayer.gameRoundUpdater.KingAlive() && game.blackPlayer.gameRoundUpdater.KingAlive())
             {
+                
                 game.whitePlayer.gameRoundUpdater.AddAvailableMovesToAll();
 
                 var info = game.whitePlayer.MovePiece();

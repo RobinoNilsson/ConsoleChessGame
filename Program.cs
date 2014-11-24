@@ -15,8 +15,19 @@ namespace ConsoleChessGame
             Game game = new Game(); // initilize new game
 
             var message = "";
+            
             game.gameBoard.PrintBoard(game.chessPieces, message);
             
+            message = GameRoundBothTeamsMoveAndPrintsToBoard(game, message);
+
+            GameOVer();
+            
+            
+        }
+
+        private static string GameRoundBothTeamsMoveAndPrintsToBoard(Game game, string message)
+        {
+
             while (game.whitePlayer.gameRoundUpdater.KingAlive() && game.blackPlayer.gameRoundUpdater.KingAlive())
             {
                 game.whitePlayer.gameRoundUpdater.AddAvailableMovesToAll();
@@ -24,7 +35,7 @@ namespace ConsoleChessGame
                 var info = game.whitePlayer.MovePiece();
                 message = info.Message();
                 game.gameBoard.PrintBoard(game.chessPieces, message);
-                
+
                 game.NewClear();
 
                 Console.ReadKey();
@@ -34,13 +45,10 @@ namespace ConsoleChessGame
                 message = info.Message();
                 game.gameBoard.PrintBoard(game.chessPieces, message);
                 game.NewClear();
-                
+
                 Console.ReadKey();
             }
-
-            GameOVer();
-            
-            
+            return message;
         }
 
         private static void GameOVer()

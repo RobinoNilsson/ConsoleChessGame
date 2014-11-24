@@ -12,7 +12,7 @@ namespace ConsoleChessGame
         static void Main(string[] args)
         {
             
-            Game game = new Game();
+            Game game = new Game(); // initilize new game
 
             var message = "";
             game.gameBoard.PrintBoard(game.chessPieces, message);

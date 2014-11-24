@@ -27,8 +27,7 @@ namespace ConsoleChessGame
 
         private static string GameRoundBothTeamsMoveAndPrintsToBoard(Game game, string message)
         {
-            Console.WriteLine("PRESS TO START");
-            Console.ReadKey();
+            PressStart();
 
             while (game.whitePlayer.gameRoundUpdater.KingAlive() && game.blackPlayer.gameRoundUpdater.KingAlive())
             {
@@ -52,6 +51,12 @@ namespace ConsoleChessGame
                 Console.ReadKey();
             }
             return message;
+        }
+
+        private static void PressStart()
+        {
+            Console.WriteLine("PRESS TO START");
+            Console.ReadKey();
         }
 
         private static void GameOVer()

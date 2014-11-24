@@ -37,11 +37,17 @@ namespace ConsoleChessGame
                 
                 Console.ReadKey();
             }
+
+            GameOVer();
+            
+            
+        }
+
+        private static void GameOVer()
+        {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("GAME OVER");
             Thread.Sleep(5000);
-            
-            
         }
     }
 }

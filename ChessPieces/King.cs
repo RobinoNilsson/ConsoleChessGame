@@ -34,8 +34,6 @@ namespace ConsoleChessGame
             possibleMoves.Add(new List<Position>
             {
                 new Position(-1,1)
-               
-
             });
             possibleMoves.Add(new List<Position>
             {

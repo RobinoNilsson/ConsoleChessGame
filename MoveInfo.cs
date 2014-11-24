@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleChessGame
 {
-    public class MoveInfo
+    public class MoveInfo  // Uses this class to print a move message in the console window
     {
         ChessPiece ally;
         public ConsoleColor enemyColor;

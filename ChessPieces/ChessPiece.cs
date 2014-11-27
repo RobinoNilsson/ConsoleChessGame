@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleChessGame
 {
-    public abstract class ChessPiece
+    public abstract class ChessPiece //Could have been an interface aswell but for our conmfort we used an abstarct class.
     {
 
         public bool _canKill; // if piece can kill = true
